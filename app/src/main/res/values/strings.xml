@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Generate Aadhaar Number</string>
+    <string name="label_random_number">Random Aadhaar Number</string>
+    <string name="generate_number">Generate</string>
+    <string name="label_more_info"><a href="https://en.wikipedia.org/wiki/Verhoeff_algorithm">More info on Verhoeff algorithm</a></string>
+</resources>

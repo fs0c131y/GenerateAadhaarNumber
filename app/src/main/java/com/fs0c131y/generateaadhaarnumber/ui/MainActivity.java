@@ -37,8 +37,17 @@ public class MainActivity extends AppCompatActivity {
 
     private String generateRandomAadhaarNumber() {
         StringBuilder randomAadhaarNumber = new StringBuilder();
+
+        // According to the UID numbering scheme white paper available here:
+        // https://drive.google.com/file/d/1uD1D6QyIiOC26UZvY2e4Fko9J3xF4TSy/view,
+        // the first digit is a version number. 0 could be used as an "escape" and 1 could be
+        // reserved for entities.
+        Random rand = new Random();
+        int versionNumber = rand.nextInt(8) + 2;
+        randomAadhaarNumber.append(Integer.toString(versionNumber));
+
         for (int i = 0; i <= 10; i++) {
-            Random rand = new Random();
+            rand = new Random();
             int value = rand.nextInt(10);
             randomAadhaarNumber.append(Integer.toString(value));
         }

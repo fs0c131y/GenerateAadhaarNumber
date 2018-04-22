@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         int versionNumber = rand.nextInt(8) + 2;
         randomAadhaarNumber.append(Integer.toString(versionNumber));
 
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             rand = new Random();
             int value = rand.nextInt(10);
             randomAadhaarNumber.append(Integer.toString(value));
